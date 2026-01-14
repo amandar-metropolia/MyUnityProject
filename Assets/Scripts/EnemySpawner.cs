@@ -76,5 +76,6 @@ public class EnemySpawner : MonoBehaviour
     void HandleGameDifficultyIncrease()
     {
         _spawnCooldown *= _spawnCooldownReductionMultiplier;
+        _spawnCooldown = Mathf.Max(_spawnCooldown, 5f);
     }
 }
